@@ -4,7 +4,8 @@
 <!--<p>{{ arr }}</p>-->
 <!--<p>{{ obj }}</p>-->
 
-<img [src]="img" alt="">
+<input type="text" (input)="onInput($event)">
+<p><strong>{{ inputValue }}</strong></p>
 
 <app-post></app-post>
 <!--<app-post></app-post>-->
