@@ -13,7 +13,7 @@ export class AppComponent {
   obj = { a: 1, b: {c: 2}};
   // img = 'https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png';
 
-  inputValue: '';
+  inputValue = '';
 
   constructor() {
     // setTimeout(
@@ -25,7 +25,16 @@ export class AppComponent {
     // );
   }
 
-  onInput(event?) {
+  onInput(event: KeyboardEvent) {
     console.log('Event: ', event);
+    this.inputValue = (event.target as HTMLInputElement).value;
+  }
+
+  onClick() {
+    console.log('Clicked');
+  }
+
+  onBlur(value: string) {
+      this.inputValue = value;
   }
 }

@@ -3,8 +3,12 @@
 <!--<p>{{ number - 2 }}</p>-->
 <!--<p>{{ arr }}</p>-->
 <!--<p>{{ obj }}</p>-->
-
-<input type="text" (input)="onInput($event)">
+<button (click)="onClick()">Button</button>
+<input
+  type="text" (keyup.enter)="onInput($event)"
+  (blur)="onBlur(myInput.value)"
+  #myInput
+>
 <p><strong>{{ inputValue }}</strong></p>
 
 <app-post></app-post>
