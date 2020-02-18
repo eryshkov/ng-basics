@@ -6,35 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Dynamic title';
-  number = 42;
-  arr = [1, 2, 3];
+  title = '';
 
-  obj = { a: 1, b: {c: 2}};
-  // img = 'https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png';
-
-  inputValue = '';
-
-  constructor() {
-    // setTimeout(
-    //   () => {
-    //     console.log('Timeout is over');
-    //     this.img = 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/240px-Angular_full_color_logo.svg.png';
-    //   },
-    //   5000
-    // );
-  }
-
-  onInput(event: KeyboardEvent) {
-    console.log('Event: ', event);
-    this.inputValue = (event.target as HTMLInputElement).value;
-  }
-
-  onClick() {
-    console.log('Clicked');
-  }
-
-  onBlur(value: string) {
-      this.inputValue = value;
+  onInput(event: any) {
+      this.title = event.target.value;
   }
 }
