@@ -1,10 +1,5 @@
 <h1>Hello Angular</h1>
 
-<button (click)="toggle = !toggle">Toggle</button>
-<button (click)="toggle = null">Reset</button>
-
-<div [ngSwitch]="toggle">
-  <p class="red" *ngSwitchCase="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, rerum ut?</p>
-  <p class="blue" *ngSwitchCase="false">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  <p *ngSwitchDefault>Lorem ipsum dolor sit amet, consectetur.</p>
-</div>
+<ul>
+  <li *ngFor="let element of arr; let i = index">{{i}}. {{ element }}</li>
+</ul>
