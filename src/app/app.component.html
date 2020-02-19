@@ -1,20 +1,4 @@
 <div class="container">
-  <h1>Angular components</h1>
-  <h2>Test title</h2>
-  <app-post-form
-    (onAdd)="updatePosts($event)"
-  ></app-post-form>
-  <hr>
-  <app-post
-    *ngFor="let p of posts"
-    [post]="p"
-    (onRemove)="removePost($event)"
-  >
-    <div #info>
-      <small *ngIf="p.text.length > 10; else shortPost">Big post</small>
-      <ng-template #shortPost>
-        <small>Short post</small>
-      </ng-template>
-    </div>
-  </app-post>
+  <h1>Directives</h1>
+
 </div>
