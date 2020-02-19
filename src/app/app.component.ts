@@ -13,10 +13,10 @@ export interface Post {
 })
 export class AppComponent implements OnInit{
   posts: Post[] = [
-    // {title: 'Хочу выучить Anglar компоненты',
-    //   text: 'Все еще учу компоненты',
-    //   id: 1
-    // },
+    {title: 'Хочу выучить Anglar компоненты',
+      text: 'Все еще учу компоненты',
+      id: 1
+    },
     {title: 'Следующий блок',
       text: 'будет про диррективы и пайпы',
       id: 2
@@ -36,12 +36,12 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      console.log('Timeout');
-      this.posts[0] = {
-        title: 'Changed',
-        text: ''
-      };
-    }, 5000);
+    // setTimeout(() => {
+    //   console.log('Timeout');
+    //   this.posts[0] = {
+    //     title: 'Changed',
+    //     text: ''
+    //   };
+    // }, 5000);
   }
 }
