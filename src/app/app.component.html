@@ -2,4 +2,10 @@
   <h1>Directives</h1>
   <p appStyle="red" [dStyles]="{border: '1px solid blue', fontWeight: 'bold', borderRadius: '5px'}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, doloremque.</p>
   <p appStyle="blue" [dStyles]="{border: '1px solid red', fontWeight: 'bold', borderRadius: '15px'}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, doloremque.</p>
+
+  <button class="btn" (click)="isVisible = !isVisible">Toggle</button>
+  <div class="wrap" *appIfnot="isVisible">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque enim eveniet ipsam magni mollitia optio porro, reprehenderit sunt tempora voluptate.</p>
+
+  </div>
 </div>
