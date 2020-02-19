@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
-import {StyleDidective} from './directives/style.didective';
+import {StyleDirective} from './directives/style.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StyleDidective,
+    StyleDirective,
   ],
   imports: [
     BrowserModule,
