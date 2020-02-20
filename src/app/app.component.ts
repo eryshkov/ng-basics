@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AppCounterService} from './services/app-counter.service';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+    constructor(public appCounterService: AppCounterService) {
+    }
 }
