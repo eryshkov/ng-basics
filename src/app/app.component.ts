@@ -23,4 +23,11 @@ export class AppComponent {
     {title: 'Title 3', text: 'Post 3 text'},
     {title: 'Title 4', text: 'Post 4 text'},
   ];
+
+  addPost() {
+      this.posts.unshift({
+          title: 'Angular 9',
+          text: 'Evgenii Angular 9 course'
+      });
+  }
 }
