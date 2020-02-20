@@ -7,7 +7,7 @@ import {LocalCounterService} from './services/local-counter.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
     providers: [
-        LocalCounterService
+        LocalCounterService,
     ]
 })
 export class AppComponent {
