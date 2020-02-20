@@ -6,4 +6,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+    appState = 'on';
+
+    modelChanged() {
+        console.log('App state: ', this.appState);
+    }
 }

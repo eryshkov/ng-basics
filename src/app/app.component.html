@@ -1,9 +1,12 @@
 <div class="container">
     <h1>ngModel</h1>
 
-    <app-switch>
+    <app-switch [(ngModel)]="appState" (ngModelChange)="modelChanged()">
 
     </app-switch>
+
+    <hr>
+    <p>{{ appState }}</p>
 </div>
 
 
