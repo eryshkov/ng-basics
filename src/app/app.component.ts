@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
     todos: Todo[] = [];
     todoTitle = '';
     loading = false;
+    error = '';
 
     constructor(private todosService: TodosService) {
     }
@@ -42,11 +43,15 @@ export class AppComponent implements OnInit {
     fetchTodos() {
         this.loading = true;
         this.todosService.fetchTodos()
-            .subscribe((todos) => {
+            .subscribe(
+                (todos) => {
                 console.log('Response: ', todos);
                 this.todos = todos;
                 this.loading = false;
-            });
+            },
+                (error) => {
+                    this.error = error.message;
+                });
     }
 
     removeTodo(id: number) {
