@@ -33,20 +33,20 @@ export class AppComponent implements OnInit {
 
         this.todosService.addTodo(newTodo)
             .subscribe((todo) => {
-            console.log('Response: ', todo);
-            this.todos.unshift(todo);
-            this.todoTitle = '';
-        });
+                console.log('Response: ', todo);
+                this.todos.unshift(todo);
+                this.todoTitle = '';
+            });
     }
 
     fetchTodos() {
         this.loading = true;
         this.todosService.fetchTodos()
             .subscribe((todos) => {
-            console.log('Response: ', todos);
-            this.todos = todos;
-            this.loading = false;
-        });
+                console.log('Response: ', todos);
+                this.todos = todos;
+                this.loading = false;
+            });
     }
 
     removeTodo(id: number) {
@@ -55,6 +55,16 @@ export class AppComponent implements OnInit {
                 this.todos = this.todos.filter(element => {
                     return element.id !== id;
                 });
+            });
+    }
+
+    completeTodo(id: number) {
+        this.todosService.completeTodo(id)
+            .subscribe((todo) => {
+                const searchedTodo = this.todos.find((todoObj) => {
+                    return todoObj.id === id;
+                });
+                searchedTodo.completed = true;
             });
     }
 }
