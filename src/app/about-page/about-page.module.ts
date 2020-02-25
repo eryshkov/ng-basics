@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
-import {AboutPageComponent} from './about-page/about-page.component';
-import {AboutExtraPageComponent} from './about-page/about-extra-page/about-extra-page.component';
-import {SharedModule} from './shared/shared.module';
+import {AboutPageComponent} from './about-page.component';
+import {AboutExtraPageComponent} from './about-extra-page/about-extra-page.component';
+import {SharedModule} from '../shared/shared.module';
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 
@@ -15,7 +15,7 @@ import {CommonModule} from '@angular/common';
         SharedModule,
         RouterModule.forChild([
             {
-                path: 'about', component: AboutPageComponent, children: [
+                path: '', component: AboutPageComponent, children: [
                     {path: 'extra', component: AboutExtraPageComponent}
                 ]
             },
